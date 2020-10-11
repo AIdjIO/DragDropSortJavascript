@@ -25,7 +25,7 @@ containers.forEach(container => {
 
 function getDragAfterElement(container, y){
     const draggableElements = [...container.querySelectorAll('.draggable:not(.dragging)')];
-
+    
     return draggableElements.reduce((closest, draggableElement)=>{
         const box = draggableElement.getBoundingClientRect();
         const offset = y - box.top - box.height/2;
